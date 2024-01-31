@@ -5,7 +5,7 @@ files:
     destination: /tmp/holamundo
 hooks:
   ApplicationStop:
-    - location: codedeploy/stop.sh
+    - location: .codedeploy/stop.sh
       timeout: 300
       runas: root
   ApplicationStart:
