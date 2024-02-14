@@ -12,6 +12,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch: 
 
 jobs:
   build:
@@ -33,9 +34,9 @@ jobs:
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3 # v3.0.0
-
+        
     - name: Hacer gradlew ejecutable
-      run: chmod +x gradlew
+      run: ${{ secrets. }}
     - name: Build with Gradle Wrapper
       run: ./gradlew build
 
